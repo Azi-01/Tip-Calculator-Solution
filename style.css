@@ -308,6 +308,7 @@ main img{
     }
 
    .card{
+        margin-top: 15vh;
         transform: unset;
         flex-direction: column;
         width: 45.56rem;
@@ -351,6 +352,15 @@ main img{
 }
 
 @media only screen and (max-width: 540px){
+    .card{
+        margin-top: 30vh;
+         transform: unset;
+         flex-direction: column;
+         width: 45.56rem;
+         height: auto;
+         
+     }
+
     .people span{
         left: 75%;
     }
@@ -364,6 +374,10 @@ main img{
 
 
 @media only screen and (max-width: 375px){
+
+    .card{
+        margin-top: 50vh;
+    }
 
     .amount-forms{
         padding: 1.5rem;
