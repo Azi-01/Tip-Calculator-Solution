@@ -32,7 +32,7 @@
               <input id="15-perc" type="button" value="15%">
               <input id="25-perc" type="button" value="25%">
               <input id="50-perc" type="button" value="50%">
-              <input type="numeric" id="custom-tip" placeholder="Custom">
+              <input type="text" inputmode="numeric" id="custom-tip" placeholder="Custom">
             </form>
           </div>
          
@@ -41,7 +41,7 @@
         <div class="people">
           <form class="people-form" action="/" method="post">
           <img src="./images/icon-person.svg" alt="person image">
-          <label for="#people-amount">Number of People</label>
+          <label for="#people-input">Number of People</label>
           <span class="people-error">Can't be zero</span>
           <input type="text" inputmode="numeric" id="people-input" placeholder="0">
           </form>
@@ -74,8 +74,6 @@
       </div>
      
     </div>
-    
-  
   </main>
   <script src="./index.js"></script>
 </body>
