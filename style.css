@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+
+--Strong_cyan: hsl(172, 67%, 45%);
+
+--Very_dark_cyan: hsl(183, 100%, 15%);
+--Dark_grayish_cyan1: hsl(186, 14%, 43%);
+--Dark_grayish_cyan: hsl(184, 14%, 56%);
+--Light_grayish_cyan1: hsl(185, 41%, 84%);
+--Light_grayish_cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    background: var(--Light_grayish_cyan1);
+    justify-content: center;
+    align-items: center;
+}
+
+main img{
+    position: absolute;
+    width: 6rem;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.card{
+    display: flex;
+    margin-top: 20vh;
+    background-color: var(--White);
+    width: 78.75rem;
+    height: 41.56rem;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+.amount-forms{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 50%;
+}
+
+.bill{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.bill label,
+.tips span,
+.people label{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--Very_dark_cyan);
+
+}
+
+.bill img{
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 0.75rem;
+}
+
+#bill-input{
+    background-color: var(--Light_grayish_cyan);
+    color: var(--Dark_grayish_cyan1);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    text-indent: 96%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    caret-color: var(--Dark_grayish_cyan);
+}
+
+#bill-input::placeholder{
+    color: var(--Dark_grayish_cyan1);
+}
+
+
+.tips{
+    margin-top: 4.5rem;
+}
+
+.tip-form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    padding: 2rem 0;
+
+}
+
+.tip-buttons input[type=button]{
+   background-color: var(--Very_dark_cyan);
+   border: none;
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   color: var(--Light_grayish_cyan);
+   font-weight: 700;
+   border-radius: 10px;
+   cursor: pointer;
+   
+}
+
+.tip-buttons input[type=button]:hover{
+    background-color: var(--Light_grayish_cyan1);
+    color: var(--Very_dark_cyan);
+}
+
+.tip-buttons input[type=button]:focus,
+.tip-buttons input[type=button].active
+{
+    color: var(--Very_dark_cyan);
+    background-color: var(--Strong_cyan);
+ }
+
+.tip-buttons #custom-tip{
+    background-color: var(--Light_grayish_cyan);
+    color: var(--Very_dark_cyan);
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+    caret-color: var(--Dark_grayish_cyan);
+}
+
+.people{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+#people-input{
+    background-color: var(--Light_grayish_cyan);
+    color: var(--Dark_grayish_cyan1);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    text-indent: 96%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    caret-color: var(--Dark_grayish_cyan);
+}
+
+#people-input:focus{
+    border: 2px solid var(--Strong_cyan);
+    outline: none;
+}
+
+.people img{
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 0.75rem;
+}
+
+.people-form{
+    position: relative;
+}
+
+.people span{
+    color: red;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 75%;
+    white-space: nowrap;
+}
+
+.display-amounts{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    transition: all 0.2s ease;
+}
+
+.amounts-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very_dark_cyan);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 1.2rem 3rem;
+}
+
+.amount-value{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.amount-value .main-text{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--White);
+}
+
+.amount-value .sub-text{
+    font-size: 1rem;
+    color: var(--Dark_grayish_cyan);
+}
+
+.amount-value .amount{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--Strong_cyan);
+}
+
+#reset-btn{
+    background-color: var(--Strong_cyan);
+    color: var(--Very_dark_cyan);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--Very_dark_cyan);
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+
+#reset-btn:disabled{
+    background-color: hsl(183, 93%, 22%);
+    color: var(--Dark_grayish_cyan1);
+    pointer-events: none;
+}
+
+#reset-btn:hover{
+    background-color: var(--Light_grayish_cyan1);
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1440px){
+    *{
+        font-size: 12px;
+    }
+
+    .card{
+        margin-top: 40vh;
+    }
+
+    .card{  
+        transform: translateY(-20%);
+    }
+
+    
+    input{
+        font-size: 1.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    *{
+        font-size: 12px;
+    }
+
+   .card{
+       transform: translateY(-40%);
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 850px){
+    *{
+        font-size: 12px;
+    }
+
+    main img{
+        top: 6%;
+    }
+
+   .card{
+        transform: unset;
+        flex-direction: column;
+        width: 45.56rem;
+        height: auto;
+        
+    }
+
+    .amount-forms{
+        width: 100%;
+        height: auto;
+    }
+
+    .tip-form{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .display-amounts{
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .amount-value .amount{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    
+    .people-form{
+        position: relative;
+    }
+
+    .people span{
+        left: 80%;
+    }
+
+    .bill img,
+    .people img
+    {
+        top: 68%;
+    }
+
+}
+
+@media only screen and (max-width: 540px){
+    .people span{
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width: 470px){
+    .people span{
+        left: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+
+    .amount-forms{
+        padding: 1.5rem;
+    }
+
+    .display-amounts{
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .people span{
+        left: 66%;
+    }
+
+
+}

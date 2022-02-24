@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main>
+    <img src="./images/logo.svg" alt="Logo">
+    <div class="card">
+      <div class="amount-forms">
+        <div class="bill">
+          <form class="bill-form" action="/" method="post">
+            <label for="bill-input">Bill</label>
+            <img src="./images/icon-dollar.svg" alt="dollar sign">
+            <input type="text" inputmode="numeric" id="bill-input" placeholder="0">
+          </form>
+        </div>
+      
+        
+        <div class="tips">
+          <span>Select Tip %</span>
+          <div class="tip-buttons">
+            <form class="tip-form" action="/" method="post">
+              <input id="5-perc" type="button" value="5%">
+              <input id="10-perc" type="button" value="10%">
+              <input id="15-perc" type="button" value="15%">
+              <input id="25-perc" type="button" value="25%">
+              <input id="50-perc" type="button" value="50%">
+              <input type="numeric" id="custom-tip" placeholder="Custom">
+            </form>
+          </div>
+         
+        </div>
+       
+        <div class="people">
+          <form class="people-form" action="/" method="post">
+          <img src="./images/icon-person.svg" alt="person image">
+          <label for="#people-amount">Number of People</label>
+          <span class="people-error">Can't be zero</span>
+          <input type="text" inputmode="numeric" id="people-input" placeholder="0">
+          </form>
+        </div>
+      
+      </div>
+      
+      <div class="display-amounts">
+        <div class="amounts-wrapper">
+          <div class="tip-amount amount-value">
+            <div class="text-content">
+              <span class="main-text">Tip Amount</span><br>
+              <span class="sub-text">/ person</span>
+            </div>
+            <span class="amount">$0.00</span>
+          </div>
+          
+          <div class="total-amount amount-value">
+            <div class="text-content">
+              <span class="main-text">Total</span><br>
+              <span class="sub-text">/ person</span>
+            </div>
+            <span class="amount">$0.00</span>
+          </div>
+          
+    
+          <button id="reset-btn" disabled>RESET</button>
+        </div>
+       
+      </div>
+     
+    </div>
+    
+  
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
